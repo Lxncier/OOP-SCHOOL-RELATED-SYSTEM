@@ -1,5 +1,7 @@
+package model.model1;
 
-package Main;
+import model.interfaces.Displayable;
+import model.interfaces.Computable;
 
 public class Grade implements Displayable, Computable {
     private Subject subject;
@@ -10,6 +12,14 @@ public class Grade implements Displayable, Computable {
         this.score = score;
     }
     
+    public Subject getSubject() { 
+        return subject;
+    }
+    
+    public void setScore(double score) {
+        this.score = score; 
+    }
+    
     @Override
     public void display(){
         System.out.println(subject.getCode() + " - " + subject.getTitle() + ": " + score);
@@ -18,6 +28,10 @@ public class Grade implements Displayable, Computable {
     @Override
     public double compute(){
         return score;
+    }
+    
+    public String getFormattedInfo() {
+        return String.format("%-10s %-30s %-6.2f", subject.getCode(), subject.getTitle(), score);
     }
 }
 

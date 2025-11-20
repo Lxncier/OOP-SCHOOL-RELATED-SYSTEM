@@ -1,4 +1,4 @@
-package Main;
+package model.model1;
 
 import java.util.UUID;
 
@@ -17,6 +17,14 @@ abstract class Person {
         return id;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
     public String getName() {
         return name;
     }

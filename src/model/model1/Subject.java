@@ -1,6 +1,4 @@
-
-package Main;
-
+package model.model1;
 
 public class Subject {
     private String code;
@@ -23,5 +21,21 @@ public class Subject {
 
     public int getUnits() {
         return units;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUnits(int units) {
+        this.units = units;
+    }
+    
+    public void displayInfo(){
+        System.out.println("Subject Code: " + code + ", Title: " + title + ", Units: " + units);
+    }
+   
+    public String getFormattedInfo() {
+        return String.format("%-10s %-30s %-6s", code, title, units);
     }
 }
